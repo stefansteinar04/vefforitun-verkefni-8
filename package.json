@@ -4,8 +4,10 @@
   "main": "scripts.js",
   "scripts": {
     "dev": "browser-sync start --server --files scripts.js index.html",
+    "test-build": "cd build && browser-sync start --server --files scripts.js index.html",
     "copy:html": "cpy ./*.html ./build/",
     "copy:js": "cpy ./*.js ./build/",
+    "copy:lib": "cpy ./lib/*.js ./build/",
     "build": "concurrently npm:copy:*"
   },
   "keywords": [],
